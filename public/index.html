@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <title>Socket.IO chat</title>
+    <link rel="stylesheet" href="/style.css" />
+    <script src="http://code.jquery.com/jquery-latest.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/main.js"></script>
+  </head>
+  <body>
+    <div id="login">
+      <form id="login_form">
+        <p>Chat Room</p>
+        <input type="text" placeholder="enter your nickname here" id="username_input">
+        <button>GO!</button>
+      </form>
+    </div>
+    <div id="main">
+      <div id="left_widget">
+        <div id="left_head">
+          <div id="avatar"></div>
+          <div id="username_left"></div>
+          <button id="add_room">+</button>
+        </div>
+        <div id="add_room_div">
+          <input type="text" placeholder="room name" id="add_room_name">
+          <input type="password" placeholder="password" id="add_room_password">
+          <div class="private_checkbox_div">
+            <label for="private_checkbox">private</label>
+            <input type="checkbox" id="private_checkbox">
+          </div>
+          <button id="add_room_confirm_button">create</button>
+        </div>
+        <div id="room_list">
+        </div>
+      </div>
+      <div id="chat">
+        <div id="chat_nav">
+          <div id="current_room">
+            Lobby
+          </div>
+          <button id="members_button" class="ui-icon ui-icon-caret-1-s">
+          </button>
+        </div>
+        <div id="members_div">
+        </div>
+        <div id="message_div">
+          <ul id="messages">
+          </ul>
+        </div>
+        <form id="chat_form">
+          <input id="chat_input" autocomplete="off" /><button>Send</button>
+        </form>
+      </div>
+      <div id="users_list">
+      </div>
+    </div>
+    <div id="check_password_dialog">
+      <input type="password" placeholder="password">
+    </div>
+    <div id="user_menu">
+      <button id="message_button">send private message</button>
+      <button id="kick_button">kick out</button>
+      <button id="ban_button">ban</button>
+    </div>
+    <div id="private_message_dialog">
+      <textarea rows="10" cols="45"></textarea>
+    </div>
+    <div id="invite_user_dialog">
+    </div>
+    <div id="invitation_dialog">
+    </div>
+  </body>
+</html>
