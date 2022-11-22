@@ -15,6 +15,6 @@
   "homepage": "https://bitbucket.org/cse330/spring2018-module6-group-457919-458948#readme",
   "dependencies": {
     "express": "^4.16.3",
-    "socket.io": "^2.1.0"
+    "socket.io": "^2.5.0"
   }
 }
